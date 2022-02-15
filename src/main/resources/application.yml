@@ -1,0 +1,28 @@
+graphql:
+  servlet:
+    mapping: /graphql
+    enabled: true
+    corsEnabled: true
+graphiql:
+  mapping: /graphiql
+  endpoint: /graphql
+  enabled: true
+  pageTitle: GraphiQL
+  cdn:
+    enabled: false
+    version: 0.11.11
+
+server:
+  port: 80
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+      dialect: org.hibernate.dialect.MariaDBDialect
+    show-sql: true
+    open-in-view: true
+  datasource:
+    password: YOUR_PASSWORD
+    driver-class-name: org.mariadb.jdbc.Driver
+    username: YOUR_USERNAME
+    url: jdbc:mariadb://maria_db:3306/YOUR_DB

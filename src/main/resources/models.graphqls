@@ -1,0 +1,10 @@
+type Query {
+  books: [Book]
+  book(id: String): Book
+  randomBook: Book
+}
+
+type Book {
+  id: String
+  name: String
+}
